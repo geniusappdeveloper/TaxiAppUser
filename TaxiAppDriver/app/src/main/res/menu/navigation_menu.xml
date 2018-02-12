@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+<item android:id="@+id/payments"
+    android:checkableBehavior="single"
+    android:icon="@drawable/payment_image"
+    android:title="Payments" />
+    <item android:id="@+id/ridehistory"
+        android:checkableBehavior="single"
+        android:icon="@drawable/ridehistory_image"
+        android:title="Ride History" />
+<item android:id="@+id/about"
+    android:checkableBehavior="single"
+    android:icon="@drawable/about_image"
+    android:title="About" />
+    <item android:id="@+id/logout"
+
+        android:icon="@drawable/logout_image"
+        android:title="Logout" />
+</menu>

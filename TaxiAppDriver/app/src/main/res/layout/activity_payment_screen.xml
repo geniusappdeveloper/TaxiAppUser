@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.app.taxi.driver.PaymentScreen">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <RelativeLayout
+            android:id="@+id/profilescreen_actionbar_layout"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="#00A7CB">
+            <TextView
+                android:id="@+id/paymentscreen_actionbar_text"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:layout_centerInParent="true"
+                android:gravity="center"
+                android:text="Payment"
+                android:textColor="#fff"
+                android:textSize="20dp" />
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="131dp"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="130dp"
+                android:background="@drawable/mappic"/>
+        </LinearLayout>
+
+
+        <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_marginTop="10dp">
+
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="60dp"
+    android:orientation="horizontal">
+
+    <RelativeLayout
+        android:layout_width="80dp"
+        android:layout_height="60dp">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/paymentscreen_circleView"
+            android:layout_width="55dp"
+            android:layout_height="55dp"
+            android:layout_centerInParent="true"
+            android:background="@drawable/profile_pic" />
+
+    </RelativeLayout>
+    <TextView
+        android:layout_width="match_parent"
+        android:id="@+id/username"
+        android:layout_height="55dp"
+        android:hint="Name"
+        android:textSize="18dp"
+android:gravity="center_vertical"
+/>
+
+
+</LinearLayout>
+        <View
+            android:layout_width="match_parent"
+            android:background="#00A7CB"
+            android:layout_marginTop="3dp"
+            android:layout_marginBottom="3dp"
+            android:layout_height="1dp"
+            />
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:layout_width="70dp"
+                android:id="@+id/linLayout_image_pickup"
+                android:layout_height="30dp">
+                <ImageView
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:layout_centerInParent="true"
+                    android:background="@drawable/home_pickup"/>
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_toRightOf="@+id/linLayout_image_pickup">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="20dp"
+                    android:id="@+id/pickup"
+                    android:layout_centerVertical="true"
+                    android:text="Pickup"
+                    />
+
+
+            </RelativeLayout>
+
+
+        </RelativeLayout>
+
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:layout_width="70dp"
+                android:id="@+id/linLayout_image_drop"
+                android:layout_height="30dp">
+                <ImageView
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:layout_centerInParent="true"
+                    android:background="@drawable/home_drop"/>
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_toRightOf="@+id/linLayout_image_drop">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="20dp"
+                    android:id="@+id/destination"
+                    android:layout_centerVertical="true"
+                    android:text="Drop"
+                    />
+
+
+            </RelativeLayout>
+
+
+        </RelativeLayout>
+
+
+
+        <View
+            android:layout_width="match_parent"
+            android:background="#00A7CB"
+            android:layout_marginTop="3dp"
+            android:layout_marginBottom="3dp"
+            android:layout_height="1dp"
+            />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textSize="20dp"
+            android:textColor="#00A7CB"
+            android:text="Bill Details"/>
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:layout_marginLeft="12dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/ride_fair_id"
+                android:textColor="#000"
+                android:text="Ride Fare"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/ride_fair_id"
+                android:textColor="#000"
+                android:text="Surcharge"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/ride_amount"
+                android:layout_alignParentRight="true"
+                android:text="$15.0"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/tax"
+                android:layout_below="@+id/ride_amount"
+                android:layout_alignParentRight="true"
+                android:text="$3.0"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#AED6F1  "
+            android:padding="10dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#000"
+                android:text="Total Fare"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="$18.0"
+                android:id="@+id/total_bill"
+                android:textColor="#000"
+                android:layout_alignParentRight="true"/>
+
+
+        </RelativeLayout>
+
+        <Button
+            android:layout_width="250dp"
+            android:text="Payment Done"
+            android:layout_height="60dp"
+            android:layout_marginTop="15dp"
+            android:textSize="22dp"
+            android:textColor="#fff"
+            android:background="@drawable/button_all_blue"
+
+            android:onClick="paymentSwitch"
+            android:id="@+id/payment_btn"
+            android:layout_gravity="center"/>
+
+
+</LinearLayout>
+    </LinearLayout>
+</RelativeLayout>

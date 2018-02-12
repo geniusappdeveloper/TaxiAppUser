@@ -1,0 +1,444 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.app.taxi.driver.HomeScreen">
+
+
+    <RelativeLayout
+        android:id="@+id/homescreen_actionbar_layout"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="#00A7CB">
+
+        <LinearLayout
+            android:id="@+id/homescreen_navigation_layout"
+            android:layout_width="60dp"
+            android:layout_height="50dp"
+            android:layout_alignParentLeft="true"
+            android:gravity="center_vertical"
+            android:orientation="vertical"
+
+
+            >
+
+            <ImageView
+                android:id="@+id/homescreen_navigationimage"
+                android:layout_width="25dp"
+                android:layout_height="20dp"
+                android:layout_centerInParent="true"
+                android:layout_gravity="center"
+                android:background="@drawable/menu" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/homescreen_actionbar_text"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:text="Home"
+            android:textColor="#fff"
+            android:textSize="20dp" />
+
+        <LinearLayout
+            android:id="@+id/homescreen_toggle_layout"
+            android:layout_width="60dp"
+            android:layout_height="50dp"
+            android:layout_alignParentRight="true"
+            android:gravity="center_vertical"
+            android:orientation="vertical"
+            android:paddingLeft="3pt"
+            android:paddingRight="5pt">
+
+            <ToggleButton
+                android:id="@+id/homescreen_togglebutton"
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:background="@drawable/toggle_selector"
+                android:textOff=" "
+                android:textOn=" " />
+
+        </LinearLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/homescreen_map"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/homescreen_actionbar_layout">
+
+        <fragment
+            android:id="@+id/map"
+            android:name="com.google.android.gms.maps.SupportMapFragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <RelativeLayout
+            android:id="@+id/pickuplocation_layout"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:visibility="gone"
+            android:layout_marginTop="25dp">
+
+            <LinearLayout
+                android:layout_width="300dp"
+                android:layout_height="40dp"
+                android:layout_centerInParent="true"
+                android:background="#fff">
+
+                <LinearLayout
+                    android:id="@+id/pickuplocation_mapicon"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+
+                    android:layout_gravity="center">
+
+                    <ImageView
+                        android:layout_width="30dp"
+                        android:layout_height="25dp"
+                        android:layout_gravity="center"
+                        android:src="@drawable/home_pickup" />
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:id="@+id/pickuplocationname_layout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="10dp">
+
+                    <TextView
+                        android:id="@+id/pickuplocation_textview"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Pick Location"
+                        android:textColor="#000"
+                        android:textColorHint="#00A7CB"
+                        android:textSize="15dp" />
+                </RelativeLayout>
+            </LinearLayout>
+        </RelativeLayout>
+
+        <!--Drop location editbox-->
+
+
+        <RelativeLayout
+            android:id="@+id/droplocation_layout"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:visibility="gone"
+            android:layout_below="@+id/pickuplocation_layout">
+
+            <LinearLayout
+                android:layout_width="300dp"
+                android:layout_height="40dp"
+                android:layout_centerInParent="true"
+                android:background="#fff">
+
+                <LinearLayout
+                    android:id="@+id/droplocation_mapicon"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_gravity="center">
+
+                    <ImageView
+                        android:layout_width="30dp"
+                        android:layout_height="25dp"
+                        android:layout_gravity="center"
+                        android:src="@drawable/home_drop" />
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:id="@+id/droplocationname_editlayout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="10dp">
+
+                    <TextView
+                        android:id="@+id/droplocation_textview"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Drop Location"
+                        android:textColor="#000"
+                        android:textColorHint="#000"
+                        android:textSize="15dp" />
+                </RelativeLayout>
+            </LinearLayout>
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="50dp"
+    android:layout_alignParentBottom="true"
+
+    android:weightSum="2"
+    android:orientation="horizontal">
+
+    <Button
+        android:id="@+id/acceptbtn_homescreen"
+        android:layout_width="200dp"
+        android:layout_height="40dp"
+        android:layout_centerInParent="true"
+        android:background="@drawable/button_all_blue"
+        android:onClick="acceptBtnClick"
+        android:text="ACCEPT"
+        android:textColor="#fff"
+        android:textSize="15dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="3dp"
+        android:layout_weight="1"
+        android:visibility="gone"
+        tools:ignore="OnClick" />
+    <Button
+        android:id="@+id/declinebtn_homescreen"
+        android:layout_width="200dp"
+        android:layout_height="40dp"
+        android:layout_weight="1"
+        android:layout_marginLeft="3dp"
+        android:layout_marginRight="5dp"
+        android:background="@drawable/button_all_blue"
+        android:onClick="decilneBtnClick"
+        android:text="Decline"
+        android:textColor="#fff"
+        android:textSize="15dp"
+        android:visibility="gone"
+        tools:ignore="OnClick" />
+</LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/afteraccept_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="#fff"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:id="@+id/about_ride"
+            android:layout_width="match_parent"
+            android:layout_height="95dp"
+            android:orientation="horizontal">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/afteraccpeting_circleView"
+                android:layout_width="90dp"
+                android:layout_height="80dp"
+                android:layout_gravity="center"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="5dp"
+                android:src="@drawable/profile_pic" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/username_textbox"
+                    android:layout_width="match_parent"
+                    android:layout_height="25dp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="10dp"
+                    android:text="Christopher"
+                    android:textColor="#000"
+                    android:textSize="18dp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="25dp"
+                    android:layout_marginTop="5dp"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:id="@+id/pickupaccepting_mapicon"
+                        android:layout_width="30dp"
+                        android:layout_height="40dp"
+                        android:layout_gravity="center">
+
+                        <ImageView
+                            android:layout_width="30dp"
+                            android:layout_height="25dp"
+                            android:layout_gravity="center"
+                            android:src="@drawable/location_icon" />
+                    </LinearLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/pickuplocationaccept_layout"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center">
+
+                        <TextView
+                            android:id="@+id/pickupaccepting_textview"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="V logics labs"
+                            android:singleLine="true"
+                            android:textColor="#939393"
+                            android:textColorHint="#939393"
+                            android:textSize="12dp" />
+                    </RelativeLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="25dp"
+                    android:layout_marginTop="5dp"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:id="@+id/dropaccepting_mapicon"
+                        android:layout_width="30dp"
+                        android:layout_height="40dp"
+                        android:layout_gravity="center">
+
+                        <ImageView
+                            android:layout_width="30dp"
+                            android:layout_height="25dp"
+                            android:layout_gravity="center"
+                            android:src="@drawable/location_icon" />
+                    </LinearLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/droplocationname_layout"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center">
+
+                        <TextView
+                            android:id="@+id/dropaccepting_textview"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="5 phase pd chownk"
+                            android:singleLine="true"
+                            android:textColor="#939393"
+                            android:textColorHint="#939393"
+                            android:textSize="12dp" />
+                    </RelativeLayout>
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+          <!--  <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/afteraccepting_amount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="$15.00"
+                    android:textColor="#00A7CB"
+                    android:textSize="18dp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Estimate \n Charge"
+                    android:textColor="#00A7CB"
+                    android:textSize="12dp" />
+
+
+            </LinearLayout>-->
+
+
+        </LinearLayout>
+
+        <View
+            android:id="@+id/view0"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@+id/about_ride"
+            android:layout_marginTop="3dp"
+            android:background="#939393" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/view0"
+            android:layout_marginBottom="2dp"
+            android:layout_marginTop="3dp"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:id="@+id/contactbutton_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/view0"
+                android:layout_gravity="center"
+                android:layout_marginBottom="2dp"
+                android:layout_marginTop="3dp"
+                android:orientation="horizontal"
+                android:weightSum="3">
+
+                <Button
+                    android:id="@+id/cancelbtn_accept"
+                    android:layout_width="90dp"
+                    android:layout_height="35dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/button_border_blue"
+                    android:text="Cancel"
+                    android:textColor="#00A7CB"
+                    android:textSize="14dp" />
+
+
+                <Button
+                    android:id="@+id/callbtn_accept"
+                    android:layout_width="90dp"
+                    android:layout_height="35dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/button_all_blue"
+                    android:text="Call"
+                    android:textColor="#fff"
+                    android:textSize="14dp" />
+
+                <Button
+                    android:id="@+id/arrivebtn_accept"
+                    android:layout_width="90dp"
+                    android:layout_height="35dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/button_all_blue"
+                    android:text="Arrived"
+                    android:textColor="#fff"
+                    android:textSize="14dp" />
+
+
+                <TextView
+                    android:text="00:00:00"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/timer"
+                    android:textSize="50dp"
+                    android:textStyle="bold"
+                    android:textColor="#009688"
+                    android:visibility="gone"/>
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+</RelativeLayout>
+
+

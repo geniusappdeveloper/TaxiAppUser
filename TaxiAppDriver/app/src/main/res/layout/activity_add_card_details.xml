@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.app.taxi.driver.AddCardDetails">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+
+        android:background="#fff"
+        android:layout_height="match_parent">
+        <RelativeLayout
+            android:id="@+id/profilescreen_actionbar_layout"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="#00A7CB">
+
+            <RelativeLayout
+                android:id="@+id/cardscreen_back_layout"
+                android:layout_width="60dp"
+                android:layout_height="50dp"
+                android:onClick="cardSwitch">
+
+                <ImageView
+                    android:id="@+id/cardscreen_backimage"
+                    android:layout_width="25dp"
+                    android:layout_height="20dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="8dp"
+                    android:background="@drawable/backimage" />
+            </RelativeLayout>
+
+
+            <TextView
+                android:id="@+id/profilescreen_actionbar_text"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:layout_centerInParent="true"
+                android:gravity="center"
+                android:text="Add Card Details"
+                android:textColor="#fff"
+                android:textSize="20dp" />
+
+        </RelativeLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="10dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:text="Cardholder"
+                android:layout_marginLeft="10dp"/>
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_marginTop="5dp"
+                android:paddingLeft="8dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:paddingRight="8dp"
+                android:singleLine="true"
+                android:layout_marginBottom="5dp"
+                android:background="#F0EFF4"
+                android:hint="john" />
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:layout_marginLeft="10dp"
+                android:layout_marginBottom="5dp"
+                android:text="Card Number" />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:background="#F0EFF4"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:hint="**********"
+                android:paddingLeft="8dp"
+                android:paddingRight="8dp"
+                android:gravity="center_vertical"
+                android:inputType="number"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="5"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_height="wrap_content"
+                    android:textStyle="bold"
+                    android:text="Expire Date" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <RelativeLayout
+                        android:layout_width="65dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:background="#F0EFF4"
+                        android:id="@+id/rel_month">
+
+                        <Spinner
+                            android:layout_width="65dp"
+                            android:id="@+id/spinner_month"
+                            android:layout_height="25dp"
+                            android:entries="@array/spiinr_month"
+                            android:background="@null">
+                        </Spinner>
+
+                        <ImageView
+                            android:layout_width="12dp"
+                            android:layout_height="8dp"
+                            android:layout_marginRight="5dp"
+                            android:layout_alignParentRight="true"
+                            android:id="@+id/img_spinner"
+                            android:layout_centerVertical="true"
+                            android:background="@drawable/dropdown_icon"/>
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="65dp"
+                        android:layout_height="wrap_content"
+                        android:background="#F0EFF4"
+                        android:id="@+id/rel_year">
+                        <Spinner
+                            android:layout_width="65dp"
+                            android:layout_height="25dp"
+                            android:id="@+id/spinner_year"
+                            android:entries="@array/spiinr_year"
+                            android:background="@null">
+                        </Spinner>
+
+                        <ImageView
+                            android:layout_width="12dp"
+                            android:layout_height="8dp"
+                            android:layout_alignParentRight="true"
+                            android:id="@+id/img_spinner_2"
+                            android:layout_marginRight="5dp"
+                            android:layout_centerVertical="true"
+                            android:background="@drawable/dropdown_icon"/>
+                    </RelativeLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+            <!--        <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="3">
+
+                    </LinearLayout>-->
+
+<!--
+            <LinearLayout
+                android:layout_width="70dp"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textStyle="bold"
+                    android:text="ccv" />
+
+                <EditText
+                    android:id="@+id/editText"
+                    android:layout_width="match_parent"
+                    android:layout_height="25dp"
+                    android:inputType="number"
+                    android:paddingRight="8dp"
+                    android:paddingLeft="8dp"
+                    android:maxLength="3"
+                    android:background="#F0EFF4"
+                    android:hint="***" />
+
+            </LinearLayout>-->
+        </LinearLayout>
+
+        <!-- <LinearLayout
+             android:layout_width="match_parent"
+             android:background="@drawable/round"
+             android:layout_marginTop="25dp"
+             android:layout_marginBottom="15dp"
+             android:layout_height="40dp">-->
+        <Button
+            android:id="@+id/button"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginBottom="15dp"
+            android:layout_marginTop="25dp"
+            android:background="@drawable/login_button_shape"
+            android:text="Submit"
+            android:textSize="18sp"
+            android:textAllCaps="false"
+            android:textColor="#fff" />
+        <!-- </LinearLayout>-->
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="@drawable/login_button_shape"
+            android:text="Cancel"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:textSize="18sp"
+            android:textColor="#fff"
+            android:textAllCaps="false"/>
+    </LinearLayout>
+</RelativeLayout>
