@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "6568319033",
+    "firebase_url": "https://norse-quest-190906.firebaseio.com",
+    "project_id": "norse-quest-190906",
+    "storage_bucket": "norse-quest-190906.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:6568319033:android:368cf552018f3517",
+        "android_client_info": {
+          "package_name": "app.taxiapp.user"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "6568319033-7v8nc5kf3ha88u39eagk41bvc222umtf.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDtmfTIKPOV1qJMbFFwqmpdCIC2LCU2bKk"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

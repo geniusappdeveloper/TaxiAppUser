@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_centerInParent="true"
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="50dp"
+        android:background="@drawable/address_bg">
+        
+<RelativeLayout
+    android:id="@+id/header"
+    android:layout_width="match_parent"
+    android:layout_height="70dp">
+    
+    <ImageView
+        android:id="@+id/ryt"
+        android:layout_width="40dp"
+        android:layout_height="50dp"
+        android:src="@drawable/right"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="20dp"/>
+
+    <TextView
+        android:layout_toRightOf="@+id/ryt"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="Booking Successful"
+        android:textSize="18dp"
+        android:gravity="center_vertical"
+        android:layout_marginLeft="20dp"
+        android:textColor="#000"/>
+</RelativeLayout>
+        <View
+            android:id="@+id/view"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#808080"
+            android:layout_below="@+id/header"
+            />
+        <TextView
+            android:layout_above="@+id/done"
+           android:layout_below="@+id/view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Your booking has been confirmed.\nDriver will pick up you in 5 minutes."
+            android:textSize="16dp"
+            android:gravity="center"
+            android:layout_marginLeft="20dp"
+            android:textColor="#363f45"/>
+<TextView
+    android:id="@+id/done"
+    android:layout_width="60dp"
+    android:layout_height="30dp"
+    android:layout_alignParentBottom="true"
+    android:layout_alignParentRight="true"
+    android:layout_marginRight="20dp"
+    android:text="DONE"
+    android:gravity="center"
+    android:layout_marginBottom="10dp"
+    android:textSize="16dp"
+    android:textColor="#000"/>
+
+    </RelativeLayout>
+</RelativeLayout>

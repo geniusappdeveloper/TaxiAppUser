@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group
+        android:id="@+id/group1"
+        android:checkableBehavior="single"
+        >
+
+        <item
+            android:id="@+id/home"
+            android:icon="@mipmap/home"
+            android:title="Home"
+            />
+
+
+        <item
+            android:id="@+id/payment"
+            android:icon="@mipmap/cash"
+            android:title="Payment" />
+
+
+        <item
+            android:id="@+id/booking"
+            android:icon="@mipmap/booking"
+            android:title="Booking" />
+
+        <item
+            android:id="@+id/free"
+            android:icon="@mipmap/free"
+            android:title="Free trips" />
+
+        <item
+            android:id="@+id/history"
+            android:icon="@mipmap/history"
+            android:title="History" />
+
+        <item
+            android:id="@+id/help"
+            android:icon="@mipmap/help"
+            android:title="Help" />
+        <item
+            android:id="@+id/settings"
+            android:icon="@mipmap/settings"
+            android:title="Settings" />
+    </group>
+</menu>
+
+
+
+

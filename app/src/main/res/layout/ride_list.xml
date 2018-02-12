@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:layout_margin="15dp"
+        android:background="@drawable/ride_list_bg">
+
+        <ImageView
+            android:id="@+id/driver_pic"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_margin="15dp"
+            android:background="#000" />
+
+        <TextView
+            android:id="@+id/driver_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:layout_toRightOf="@+id/driver_pic"
+            android:singleLine="true"
+            android:text="Driver Name"
+            android:textColor="#000"
+            android:textSize="16dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/ride_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/driver_name"
+            android:layout_toRightOf="@+id/driver_pic"
+            android:singleLine="true"
+            android:text="29 Dec,2017  11:00 AM"
+            android:textColor="#000"
+            android:textSize="10dp"
+            />
+
+        <ImageView
+            android:layout_width="15dp"
+            android:layout_height="20dp"
+            android:id="@+id/currency"
+            android:layout_toLeftOf="@+id/price"
+            android:layout_marginTop="15dp"
+            android:layout_marginRight="5dp"
+            android:background="#00A7CB"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:id="@+id/price"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="15dp"
+            android:layout_marginTop="15dp"
+            android:text="140"
+            android:textColor="#00A7CB"
+            android:textSize="14dp" />
+
+        <TextView
+            android:id="@+id/payment_type"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/price"
+            android:layout_marginRight="15dp"
+            android:text="Cash"
+            android:textColor="#00A7CB"
+            android:textSize="14dp" />
+
+        <View
+            android:id="@+id/v"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_centerInParent="true"
+            android:background="#dbdbdb" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/v">
+
+            <ImageView
+                android:id="@+id/vhcl_pic"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_margin="15dp"
+                android:background="#000" />
+
+
+            <TextView
+                android:id="@+id/vhcl_details"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:singleLine="true"
+                android:layout_toRightOf="@+id/vhcl_pic"
+                android:text="Etios Liva PB08 BN 4749"
+                android:textColor="#000"
+                android:textSize="10dp"
+                />
+            <ImageView
+                android:id="@+id/line"
+                android:layout_width="10dp"
+                android:layout_height="match_parent"
+                android:layout_centerVertical="true"
+                android:layout_toLeftOf="@+id/source"
+                android:layout_marginTop="15dp"
+                android:layout_marginBottom="10dp"
+                android:layout_marginRight="5dp"
+                android:background="#00A7CB"/>
+
+            <TextView
+                android:id="@+id/source"
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="15dp"
+                android:singleLine="true"
+                android:text="North Country Mall"
+                android:gravity="left"
+                android:textColor="#000"
+                android:textSize="10dp" />
+
+            <TextView
+                android:id="@+id/dest"
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/source"
+                android:singleLine="true"
+                android:layout_marginRight="15dp"
+                android:text="Elante Mall"
+                android:textColor="#000"
+                android:gravity="left"
+                android:textSize="10dp" />
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+
+
+
+</LinearLayout>

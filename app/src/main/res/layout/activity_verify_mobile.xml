@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fff"
+   >
+
+    <RelativeLayout
+        android:id="@+id/verifymobile_actionbar_layout"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="#00A7CB">
+
+        <RelativeLayout
+            android:id="@+id/verifymobile_back_layout"
+            android:layout_width="60dp"
+            android:layout_height="50dp">
+
+            <ImageView
+                android:id="@+id/verifymobile_backimage"
+                android:layout_width="40dp"
+                android:layout_height="50dp"
+                android:layout_centerInParent="true"
+                android:background="@drawable/backimage" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/verify_actionbar_text"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:gravity="center"
+            android:text="Verify Mobile"
+            android:textColor="#fff"
+            android:textSize="20dp"
+            android:textStyle="bold" />
+    </RelativeLayout>
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:layout_alignParentBottom="true"
+    android:layout_alignParentLeft="true"
+    android:layout_alignParentStart="true">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/verifymobile_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="50dp">
+
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:id="@+id/verifymobile_image"
+            android:layout_marginTop="25dp"
+            android:src="@drawable/otp_img" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_gravity="center"
+            android:text="We are unable to auto-verify"
+            android:textColor="#000"
+            android:textSize="14dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="your mobile number. Please enter"
+            android:textColor="#000"
+            android:textSize="14dp" />
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_gravity="center">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="the code sent to"
+                android:textColor="#000"
+                android:textSize="14dp" />
+            <TextView
+                android:id="@+id/set_phone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text=" +1 98234 56789"
+                android:textColor="#00A7CB"
+                android:textSize="14dp" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/verifymobile_floatingtext"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:layout_below="@+id/verifymobile_text"
+        android:layout_centerHorizontal="true"
+        android:textColorHint="#939393"
+        android:layout_marginTop="10dp">
+
+        <EditText
+            android:id="@+id/otp"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_marginLeft="6dp"
+            android:hint="Enter OTP"
+            android:inputType="number"
+            android:paddingLeft="15dp"
+            android:background="@drawable/login_line"
+            android:textColor="#000"
+            android:textColorHint="#939393" />
+    </android.support.design.widget.TextInputLayout>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@id/verifymobile_floatingtext"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/login_button_shape"
+        android:text="SUBMIT"
+        android:id="@+id/submit"
+        android:textColor="#fff"
+        android:textSize="20dp" />
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="30dp"
+    android:weightSum="2"
+    android:orientation="horizontal"
+    android:layout_below="@+id/verifymobile_button"
+    android:layout_marginTop="15dp">
+
+    <TextView
+        android:id="@+id/changenumber"
+        android:layout_width="150dp"
+        android:layout_height="25dp"
+        android:text="CHANGE NUMBER"
+        android:layout_marginTop="3dp"
+        android:textSize="14dp"
+        android:gravity="left"
+        android:textColor="#939393"
+        android:layout_marginLeft="8dp"
+        android:layout_weight="1"/>
+
+    <TextView
+        android:id="@+id/resend"
+        android:layout_width="150dp"
+        android:gravity="right"
+        android:layout_height="25dp"
+        android:layout_marginTop="3dp"
+        android:layout_marginRight="8dp"
+        android:text="RESEND CODE"
+        android:textColor="#939393"
+        android:textSize="14dp"
+        android:layout_weight="1"/>
+
+</LinearLayout>
+    </LinearLayout>
+    </ScrollView>
+</LinearLayout>
+</RelativeLayout>
